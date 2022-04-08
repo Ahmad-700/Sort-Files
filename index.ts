@@ -4,7 +4,7 @@ const config: Config = {//hover for more info
    ignoreDuplicate: false,
    ignoreJumping: false,
    sleepAfterDisplay: 3000
-}
+}//don't forget complie TS file before run JS file
 
 //Do NOT Touch Below
 import * as fileSystem from 'fs'
