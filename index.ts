@@ -1,8 +1,4 @@
-/**
- */
-
-
-const config: Config = {
+const config: Config = {//hover for more info
    path: `C:\\Users\\Ahmed\\Desktop\\Tests Folder\\test`,
    ignoreNotDigitalize: false,
    ignoreDuplicate: false,
@@ -124,8 +120,8 @@ interface Config {
     */
    ignoreDuplicate: boolean,
    /**
-    * show table of how renaming will be for each file. wait time in ms.
-    * So, you can cancel the execution if there is an error by 'ctrl + c'
+    *  wait time in ms. show table of how renaming will be for each file.
+    * So, you can cancel the execution by 'ctrl + c'
     */
    sleepAfterDisplay: number
 }
@@ -207,9 +203,7 @@ const wrapper = (async () => {//to get rid of try catch in main function
       if (typeof compiled !== 'boolean' || compiled === false)
          throw new Error(`Compile TypeScript File Before Run JavaScript! ${compiled || ''}`)
       
-      true ?//true main(), false test()
-         await main() :
-         await test();
+      await main();
       console.timeEnd('process Time');
    } catch (e) { console.log('wrapper catch', e) }
 })
